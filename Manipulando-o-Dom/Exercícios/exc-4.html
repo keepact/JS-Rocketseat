@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Curso Javascript: Manipulando a DOM</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" name="nome">
+            <button onClick="adicionar()">Adicionar</button>
+            <ul class="lista"></ul>
+        </div>
+        
+        <script>
+
+
+            function resultObject(users) {
+                let iterable = users;
+
+                for (let users of iterable) {
+                    var childElement = document.createElement('li');
+                    var containerElement = document.querySelector('.lista');
+                    containerElement.appendChild(childElement);
+                    var textElement = document.createTextNode(users);
+                    childElement.appendChild(textElement);
+                }
+            }
+
+            var inputElement = document.querySelector('input');
+            function adicionar(newuser) {
+                var newuser = inputElement.value;
+
+                var childElement = document.createElement('li');
+                var containerElement = document.querySelector('.lista');
+                containerElement.appendChild(childElement);
+                var textElement = document.createTextNode(newuser);
+                childElement.appendChild(textElement);
+                
+                document.querySelector('input').value = "";
+
+                return newuser;
+            }
+
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+
+            resultObject(nomes);
+        </script>
+    </body>
+</html>
+
+
+

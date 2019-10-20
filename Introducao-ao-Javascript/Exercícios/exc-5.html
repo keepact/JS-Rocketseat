@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Curso Javascript: Exercícios: Módulo 01</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            function resultObject(users) {
+                let iterable = users;
+
+                for (let users of iterable) {
+                    console.log('O', users.nome, 'possui as habilidades:', users.habilidades.join(', '));
+                }
+            }
+
+            var usuarios = [
+                {
+                    nome: "Diego",
+                    habilidades: ["Javascript", "ReactJS", "Redux"]
+                },
+                {
+                    nome: "Gabriel",
+                    habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+                }
+            ];
+
+            resultObject(usuarios);
+            
+            // O Diego possui as habilidades: Javascript, ReactJS, Redux
+            // O Gabriel possui as habilidades: VueJS, Ruby on Rails, Elixir
+            </script>
+    </body>
+<html> 

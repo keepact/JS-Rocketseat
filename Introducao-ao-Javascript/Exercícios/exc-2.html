@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Curso Javascript: Exercícios: Módulo 01</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            function pares(x, y) {        
+                var j=x, msg="";
+                while (j<=y){
+     
+            //só concatena se forem números pares
+                if(j % 2 == 0){
+                    msg += j + ", ";
+                }
+                j++;
+            };
+            //retira ultima virgula com ultimo espaço 
+            msg = msg.substr(0,(msg.length -2));
+                 return msg;
+            }
+            
+            var resultado = pares(32, 321);
+            console.log(resultado)
+        </script>
+    </body>
+<html> 

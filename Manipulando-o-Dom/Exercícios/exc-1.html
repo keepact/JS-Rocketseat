@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Curso Javascript: Manipulando a DOM</title>
+    </head>
+    <body>
+        <div id="app">
+            <button class="botao">Clique em mim!</button>
+        </div>
+        
+        <script>
+
+            var btnElement = document.querySelector('button.botao');
+            
+            btnElement.onclick = function() {
+                
+                var classElement = document.createElement('div');
+                classElement.style.width = 100;
+                classElement.style.height = 100;
+                classElement.style.backgroundColor = '#f00';
+
+                var containerElement = document.querySelector('#app');
+                containerElement.appendChild(classElement);
+            }
+        </script>
+    </body>
+</html>
+
+
+

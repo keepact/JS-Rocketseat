@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Curso Javascript: Manipulando a DOM</title>
+    </head>
+    <body>
+        <div id="app">
+            <ul class="lista"></ul>
+        </div>
+        
+        <script>
+
+
+            function resultObject(users) {
+                let iterable = users;
+
+                for (let users of iterable) {
+                    var childElement = document.createElement('li');
+                    var containerElement = document.querySelector('.lista');
+                    containerElement.appendChild(childElement);
+                    var textElement = document.createTextNode(users);
+                    childElement.appendChild(textElement);
+                }
+            }
+
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+
+            resultObject(nomes);
+        </script>
+    </body>
+</html>
+
+
+

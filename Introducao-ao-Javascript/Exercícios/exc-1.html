@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Curso Javascript: Exercícios: Módulo 01</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            var endereco = {
+            rua: "Rua dos pinheiros",
+            numero: 1293,
+            bairro: "Centro",
+            cidade: "São Paulo",
+            uf: "SP"
+            };
+
+            function newFunction(endereco) {
+                var resultado = endereco;
+
+                return resultado;
+            }
+
+            var resultado = newFunction;
+            console.log('O usuário mora em', endereco.cidade, '/', endereco.uf,',', 'no bairro', endereco.bairro,',', 'na rua', endereco.rua, 'com n*', endereco.numero);
+
+        </script>
+    </body>
+<html> 
